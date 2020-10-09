@@ -11,7 +11,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  res.send(
+    "Welcome to Node-Mail-Api Send a post request to this api with the body{'from':'example@email.com','to':'example@email.com','subject':'Your Subject','message':'Your Message'} and we will post your mail"
+  );
 });
 
 app.post("/", async (req, res) => {
